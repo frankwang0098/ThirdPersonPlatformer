@@ -1758,7 +1758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 1648443529}
-  moveSpeed: 4
+  moveSpeed: 3
+  moveSpeedAir: 2
   jumpForce: 20
   fallMultiplier: 2
   rb: {fileID: 1648443527}
