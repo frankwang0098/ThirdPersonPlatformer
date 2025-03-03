@@ -4,10 +4,10 @@ using UnityEngine.Events;
 public class CoinController : MonoBehaviour
 {
     public UnityEvent OnCoinCollect = new();
-    [SerializeField] private float rotationSpeed = 90f;
-    void Update()
+    [SerializeField] private float rotationSpeed = 5;
+    private void FixedUpdate()
     {
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+        transform.Rotate(0, 0, rotationSpeed);
     }
 
     private void OnTriggerEnter(Collider triggeredObject)
