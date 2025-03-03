@@ -1,16 +1,28 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float score = 0;
+    [SerializeField] private TextMeshProUGUI scoreText;
+
+    private void Start()
     {
-        
+        UpdateScoreText();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void IncrementScore()
     {
-        
+        score++;
+        UpdateScoreText();
+    }
+
+    private void UpdateScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = $"Score: {score}";
+        }
     }
 }

@@ -12,7 +12,6 @@ public class CoinController : MonoBehaviour
 
     private void OnTriggerEnter(Collider triggeredObject)
     {
-        // Check if the player collided
         if (triggeredObject.CompareTag("Player"))
         {
             OnCoinCollect?.Invoke();

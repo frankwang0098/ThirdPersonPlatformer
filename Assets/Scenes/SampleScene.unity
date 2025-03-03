@@ -878,6 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431a818adb3501f4b9e9832b21714b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 2029963507}
 --- !u!4 &546470378
 Transform:
   m_ObjectHideFlags: 0
@@ -990,6 +992,7 @@ GameObject:
   - component: {fileID: 849332472}
   - component: {fileID: 849332471}
   - component: {fileID: 849332470}
+  - component: {fileID: 849332474}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -1088,6 +1091,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &849332474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849332469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5eef196a425314a911032f99b70bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCoinCollect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 546470377}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: IncrementScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  rotationSpeed: 90
 --- !u!1 &1236793183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,7 +1801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -32, y: 481}
+  m_AnchoredPosition: {x: 60, y: 481}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029963507
