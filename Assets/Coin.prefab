@@ -126,7 +126,7 @@ MonoBehaviour:
   OnCoinCollect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 431a818adb3501f4b9e9832b21714b1f, type: 3}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: IncrementScore
         m_Mode: 1
@@ -138,4 +138,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  rotationSpeed: 90
+  rotationSpeed: 5
